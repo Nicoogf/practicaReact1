@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import Saludo from "./components/pure/Saludo" ;
-import SaludoF from './components/pure/SaludoF';
+
+import TaskListComponent from './components/container/task_list';
 
 
 function App() {
@@ -14,7 +14,10 @@ function App() {
         <Saludo name={"Martin"} />       
         <SaludoF name={"Martin"} /> 
        */}
+
+       {/* Componente de listado de tareas*/}
        
+       <TaskListComponent />
        
       </header>
     </div>
