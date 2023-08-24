@@ -1,17 +1,17 @@
 import { LEVELS } from "./levels.enum";
 
 
-export default class Task {
-    name = "";
-    desc = "";
-    completed = false;
-    level =  LEVELS.NORMAL
 
+export class Task {
+    name = "" ;
+    description = "";
+    completed = false ; 
+    level = LEVELS.NORMAL;
 
-    constructor(name,desc,completed,level){
-        this.name = name;
-        this.desc = desc;
+    constructor( name , description , completed , level) {
+        this.name =  name ;
+        this.description = description ;
         this.completed = completed;
-        this.level = level;
+        this.level = level ;
     }
 }

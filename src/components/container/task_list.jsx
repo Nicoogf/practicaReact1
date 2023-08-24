@@ -1,27 +1,26 @@
-import React from 'react';
+
+import React from 'react' ;
+import { LEVELS } from '../../models/levels.enum' ;
 import { Task } from "../../models/task.class" ;
-import { LEVELS } from '../../models/levels.enum';
-import TaskComponent from "../pure/task"
+import TaskComponent from "../pure/task" ;
 
 
 
 const TaskListComponent = () => {
 
-    const defaultTask = new Task( "Ejemplo" , "Ejemplo por defecto" , false , LEVELS.NORMAL) 
 
+    const defaultTask = new Task ( 'Example' , 'Default Description' , false , LEVELS.NORMAL)
 
     return (
-
         <div>
+
             <div>
-               Your Tasks : 
+                Tu tarea :
             </div>
 
-            {/* Aplicar un map para renderizar tareas*/ }
-
-            <TaskComponent task={defaultTask} > </TaskComponent>
+            <TaskComponent task={defaultTask}></TaskComponent>
+           
         </div>
-
     );
 };
 

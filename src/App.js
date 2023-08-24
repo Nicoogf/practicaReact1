@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-
 import TaskListComponent from './components/container/task_list';
+
 
 
 function App() {
@@ -10,14 +10,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
        
-        {/*
-        <Saludo name={"Martin"} />       
-        <SaludoF name={"Martin"} /> 
-       */}
-
-       {/* Componente de listado de tareas*/}
-       
-       <TaskListComponent />
+        <TaskListComponent> </TaskListComponent>
        
       </header>
     </div>
