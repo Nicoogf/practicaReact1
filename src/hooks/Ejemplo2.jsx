@@ -28,6 +28,19 @@ const Ejemplo2 = () => {
     });
 
 
+    /*Caso 2 Ejecutar solo en contador1 o contador2 */ 
+    useEffect(()=>{
+        console.log("cambio en el estado del CONTADOR 1")
+        console.log("Mostrando referencia a elemento de DOM")
+        console.log(miRef)
+    }, [contador1])
+
+       /*Caso 3 Ejecutar solo en algunos casos */ 
+       useEffect(()=>{
+        console.log("cambio en el estado del CONTADOR 1/ CONTADOR 2")
+        console.log("Mostrando referencia a elemento de DOM")
+        console.log(miRef)
+    }, [contador1 , contador2])
 
 
     return (
