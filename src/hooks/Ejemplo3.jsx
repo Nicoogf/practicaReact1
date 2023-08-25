@@ -1,60 +1,56 @@
-import React , { useState ,useContext } from 'react';
+import React , { useState , useContext } from 'react'
 
-/* Componente 1 dispone de un contexto que tiene un valor recibido por el padre */
 
-const miContexto = React.createContext(null)
 
-const Componente1 = () => { 
+const miContexto = new React.createContext()
 
-const state = useContext(miContexto);
+const Componente1 = () => {
 
-    return (
-        <div>
-            <h1>El Token es : {state.toke} </h1>
+const state = useContext(miContexto)
 
-            <Componente2> </Componente2>
-        </div>
-    );
- }
-
-const Componente2  = () => {
-
-    const state = useContext(miContexto);
-
-    return (
-        <div>
-            <h2> La sesion es : {state.sesion} </h2>
-        </div>
-    );
+  return (
+    <div>
+        <h1> El Token es  : { state.token } </h1>
+        <Componente2 > </Componente2>
+    </div>
+  )
 }
 
 
+const Componente2 = () => {
 
-export default function MiComponenteContext() {
+    const state = useContext(miContexto)
+    return (
+      <div>
+          <h2> ID de la sesion es : {state.sesion} </h2>
+      </div>
+    )
+  }
+
+  
+export default function MiComponenteConContexto () {
 
     const estadoInicial = {
-        token : "1234567" ,
+        token : "123123",
         sesion : 1
     }
 
+    const [sesionData , setSessionData ] = useState(estadoInicial)
 
-    const [sessionData, setsessionData] = useState(estadoInicial);
 
-    function ActualizarSesion() {
-        setsessionData({
-            token: "JWT123467",
-            session : sessionData.sesion + 1 
+    function ActualizarSesion(){
+        setSessionData ({
+            token : "APFINS",
+            sesion : sesionData.sesion + 1
         })
     }
 
-    return(
-        <MiComponenteContext.Provider value={sessionData}>
-            {/* Todo lo que esta aca adentro se puede leer los datos de sesiondata */}
-            {/*Si se actulizan los componentes de aquim tambien lo acualizan*/}
-            <h1> Ejemplo de UseState y useContext</h1>
-            <Componente1></Componente1>
-            <button onclick={ActualizarSesion}>Actualizar session</button>
-        </MiComponenteContext.Provider>
-    )
+
+    return (
     
-}
+         <miContexto.Provider value= {sesionData}>
+            <Componente1></Componente1>
+            <button onClick={ActualizarSesion}>Actualizar Sesion</button>
+         </miContexto.Provider>
+    )
+  }
