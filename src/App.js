@@ -1,17 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+/*
+
+
 import TaskListComponent from './components/container/task_list'; 
 import Ejemplo1 from './hooks/Ejemplo1';
 import Ejemplo2 from './hooks/Ejemplo2';
-import MiComponenteContext from './hooks/Ejemplo3';
+import MiComponenteContext from './hooks/Ejemplo3'; 
 import Ejemplo4 from './hooks/Ejemplo4';
+
+
+*/
+
+
 
 
 
 
 
 /* PRACTICA */
-/* import SongList from './components/container/song_list'; */
+import CancionList from './components/container/cancion_lista'; 
 
 
 
@@ -31,26 +39,24 @@ function App() {
        
        
        
-       <Ejemplo4 nombre="Martin">
+      {/*  
+      
 
-        {/* TODO LO QUE ESTE DENTRO DEL EJEMPLO4 SERA PROPS.CHILDREN */}
-
+      <Ejemplo4 nombre="Martin">
           <h3>Contenido del props.children</h3>
-
-
        </Ejemplo4>
        
+
+
+
+      */ } 
        
       
       
       
       
       
-       {/* 
-       PRACTICA
-
-       <SongList> </SongList>
-       */ } 
+       <CancionList> </CancionList>
        
       </header>
     </div>

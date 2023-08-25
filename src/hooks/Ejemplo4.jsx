@@ -5,6 +5,12 @@ const Ejemplo4 = (props) => {
         <div>
             <h1>*** Ejemplo de children props ***</h1>
             <h2>Nombre : { props.nombre }</h2>
+            <h2>Nombre : { props.nombre }</h2>
+            <h2>Nombre : { props.nombre }</h2>
+            <h2>Nombre : { props.nombre }</h2>
+            <h2>Nombre : { props.nombre }</h2>
+            <h2>Nombre : { props.nombre }</h2>
+            <h2>Nombre : { props.nombre }</h2>
             {props.children}
 
         </div>
