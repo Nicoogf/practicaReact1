@@ -1,48 +1,62 @@
-import React  , { useState  , useRef , useEffect} from 'react'
+ /* import React , { useState , useContext }from 'react'
+
+const miContexto = React.createContext( null )
 
 
-function EEjemplo1(props) {
+export default function  MiComponenteConContexto() {
 
-    const valorInicial = 0 ;
-    const [contador1 ,setContador1 ] = useState(valorInicial) ;
-    const [contador2 ,setContador2 ] = useState(valorInicial) ;
-
-    const primerAumento = () => {
-        setContador1( contador1 + 1)
+    const estadoInicial = {
+     token : "12345677", 
+     sesion : 1
     }
-
-    const segundoAumento = () => {
-        setContador2( contador2 + 2)
+ 
+    const [sesiondata, setSesionData] = useState(estadoInicial)
+ 
+    function actualizarSesion(){
+     setSesionData({
+         token : "JQOWEJ", 
+         sesion : 2
+        })
     }
+     
+ 
+     return (
+       <miContexto.Provider value = {sesiondata}>
+         <Componente1></Componente1>
+         <button onClick={ actualizarSesion }> Actualizar </button>
+       </miContexto.Provider>
+     )
+   }
+   
 
-    const miReferencia = useRef();
-    
-    useEffect(()=>{
-        console.log("Se altero el estado de este componente")
-    },[contador1])
+  const  Componente1= () => {  
 
-    useEffect(()=>{
-        console.log("Se altero el estado DEL SEGUNDO componente")
-    },[contador2])
+    const estado = useContext(miContexto)
+       
+     return (
+       <div>
+   
+           <h1>El token es : { estado.token } </h1>
+   
+          <Componente2> </Componente2>
+   
+       </div>
+     )
+   }
+   
 
-  return (
-    <div>
+   
+const  Componente2= () => {
 
-    <h2>Primer Contador : </h2>
-    <h3 ref={miReferencia}> { contador1 } </h3> 
-    <button onClick={primerAumento}> Cambiar numero </button>
+    const estado = useContext(miContexto)
 
-    <br />
+    return (
+      <div>
+        <h2> La sesion es : { estado.sesion }</h2>
+      </div>
+    )
+  }
 
-    <h2> Segundo Contador </h2>
-    <h3 ref={miReferencia}> { contador2 } </h3>
-    <button onClick={segundoAumento}> Cambiar numero </button>
-            
-
-    </div>
-  )
-}
+  */
 
 
-
-export default EEjemplo1
