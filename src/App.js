@@ -11,6 +11,7 @@ import CancionList from './components/container/cancion_lista';
 import Ejemplo1 from './hooks/Ejemplo1';
 import Ejemplo2 from './hooks/Ejemplo2';
 import MiComponenteConContexto from './hooks/Ejemplo3';
+import EEjemplo1 from './hooks/EEjemplo1';
 
 
 
@@ -23,12 +24,13 @@ function App() {
       {/*  <TaskListComponent> </TaskListComponent> 
           <Ejemplo2></Ejemplo2> 
  
+         <MiComponenteConContexto> </MiComponenteConContexto>
       */}
 
        
-        <MiComponenteConContexto> </MiComponenteConContexto>
 
 
+      <EEjemplo1></EEjemplo1>
 
 
 
