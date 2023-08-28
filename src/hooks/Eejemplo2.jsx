@@ -47,7 +47,7 @@ export default function ContenedorMain() {
     function Actualizar(){
         setData ({
             id : "Nueva Sesion",
-            num : 2
+            num : data.num + 1
         })
     }
   
