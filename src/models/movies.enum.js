@@ -1,6 +1,7 @@
 export const CALIFICACION = {
-    MALA : "mala",
-    NORMAL : "normal" ,
+    MALA : "mala" ,
+    REGULAR : "regular",
     BUENA : "buena" ,
+    MUY_BUENA : "muy buena",
     EXCELENTE : "excelente"
 }

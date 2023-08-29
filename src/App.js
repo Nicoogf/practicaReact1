@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import MiComponenteConContexto from './hooks/EEjemplo1';
 import ContenedorMain from './hooks/Eejemplo2';
+import MoviesListComponent from './components/container/movies_list';
 /*
 
 import TaskListComponent from './components/container/task_list'; 
@@ -29,12 +30,13 @@ function App() {
  
          <MiComponenteConContexto> </MiComponenteConContexto>
           <EEjemplo1></EEjemplo1>
+          <ContenedorMain></ContenedorMain>
       */}
 
        
 
-
-      <ContenedorMain></ContenedorMain>
+      <MoviesListComponent></MoviesListComponent>
+    
 
 
 

@@ -18,6 +18,8 @@ const TaskComponent =  ( { task } ) => {
                 Nombre : {task.name}
             </h2>
 
+            
+
             <h3> 
                 Descripcion  : {task.description}
             </h3>
