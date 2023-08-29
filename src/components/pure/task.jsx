@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Task } from '../../models/task.class';
 
 
 const TaskComponent =  ( { task } ) => {
+
+    useEffect(()=>{
+        console.log("Tarea Creada")
+        return () => 
+        console.log(` Tarea  : ${task.name} fue desaparecida`)
+    }, [ task ] )
+
     return (
         <div>
 
